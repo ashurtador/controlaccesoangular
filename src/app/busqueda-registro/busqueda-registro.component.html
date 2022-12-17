@@ -1,0 +1,51 @@
+
+
+<form (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="row align-items-start">
+            
+            <div class="col">
+                <input type="radio" id="peaton" name="identificacion" value="cedula">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" [(ngModel)]="cedulaBusqueda"><br>
+
+                <br><button (click)="obtenerRegistroPeatonesCedula(cedulaBusqueda)"><a>Buscar Peaton</a></button><br>  
+              
+            </div>
+            <div class="col">
+                <input type="radio" id="vehiculo" name="identificacion" value="placa">
+                <label for="placa">Placa:</label>
+                <input type="text" id="placa" name="placa" [(ngModel)]="placaBusqueda"><br>
+
+                <br><button (click)="obtenerRegistroVehiculosPlaca(placaBusqueda)"><a>Buscar Vehiculo</a></button><br>      
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="container">
+    <h3>Resultado de Busqueda</h3>
+    <table class= "table table-striped">
+        <thead class="table-light">
+            <tr>
+                <th>id</th>
+                <th>Identificacion</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let resultadoRegistroPeatones of resultadoRegistroPeatones ">
+                <td>{{resultadoRegistroPeatones.idRegistroPeatones}}</td> 
+                <td>{{resultadoRegistroPeatones.cedula}}</td> 
+                <td>{{resultadoRegistroPeatones.time}}</td>   
+            </tr>
+            <tr *ngFor="let resultadoRegistroVehiculos of resultadoRegistroVehiculos ">
+                <td>{{resultadoRegistroVehiculos.idRegistroVehiculos}}</td> 
+                <td>{{resultadoRegistroVehiculos.placa}}</td> 
+                <td>{{resultadoRegistroVehiculos.time}}</td>   
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

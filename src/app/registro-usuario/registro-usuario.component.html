@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+        <div class="col-3">
+            <form (ngSubmit)="onSubmit()">            
+            <div>
+                <input type="radio" id="peaton" name="identificacion" value="1">
+                <label for="peaton">Peaton</label><br><br>
+                <label for="cedula">Cédula:</label><br>
+                <input type="text" id="cedulaPeaton" name="cedula" maxlength="20" [(ngModel)]="nuevoPeaton.cedula"><br>
+                <label for="nombres">Nombres:</label><br>
+                <input type="text" id="nombresPeaton" name="nombres"maxlength="100" [(ngModel)]="nuevoPeaton.nombres"><br>
+                <label for="cedula">Apellidos:</label><br>
+                <input type="text" id="apellidosPeaton" name="apellidos"maxlength="100" [(ngModel)]="nuevoPeaton.apellidos"><br>
+                <label for="nombres">Unidad:</label><br>
+                <input type="text" id="unidadPeaton" name="unidad" maxlength="10" [(ngModel)]="nuevoPeaton.unidad"><br>
+                <label for="cedula">Residente/Visitante:</label><br>
+                <input type="text" id="residenteVisitantePeaton" name="residente_visitante" maxlength="10" [(ngModel)]="nuevoPeaton.residenteVisitante"><br>
+                <label for="nombres">Vehiculo:</label><br>
+                <input type="text" id="vehiculoPeaton" name="vehiculo" maxlength="10" [(ngModel)]="nuevoPeaton.vehiculo"><br><br>
+                <button (click)="registrarPeaton(nuevoPeaton)"><a>Registrar Peaton</a></button> 
+            </div>
+            </form>
+        </div>
+        <div class="col-3">
+            <form (ngSubmit)="onSubmit()"> 
+            <div >
+                <input type="radio" id="vehiculo" name="identificacion" value="2">
+                <label for="vehiculo">Vehiculo</label><br><br>
+                <label for="cedula">Placa:</label><br>
+                <input type="text" id="placaVehiculo" name="placa" [(ngModel)]="nuevoVehiculo.placa"><br>
+                <label for="nombres">Unidad:</label><br>
+                <input type="text" id="unidadVehiculo" name="unidad" [(ngModel)]="nuevoVehiculo.unidad"><br>
+                <label for="cedula">Residente/Visitante:</label><br>
+                <input type="text" id="residenteVisitanteVehiculo" name="residente_visitante" [(ngModel)]="nuevoVehiculo.residenteVisitante"><br><br>
+                <button  (click)="registrarVehiculo(nuevoVehiculo)"><a>Registrar Vehiculo</a></button> 
+            </div>
+            </form>
+        </div>
+</div>
+

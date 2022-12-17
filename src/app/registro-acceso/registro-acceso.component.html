@@ -1,0 +1,19 @@
+
+<form class=" justify-content-center" (ngSubmit)="onSubmit()">
+  <div class="row justify-content-center">
+      <div class="col-3 form-group">
+          <input type="radio" id="peatonRegistroAcceso" name="identificacion" value="cedula">
+          <label>Cédula:</label>
+          <input type="text" id="cedulaRegistroAcceso" name="cedulaRegistroAcceso" [(ngModel)]="nuevoRegistroPeaton.cedula"><br>
+          <br><button (click)="registrarAccesoPeaton(nuevoRegistroPeaton)"><a>Registrar Peaton</a></button><br>  
+      </div>
+      <div class="col-3 form-group">
+          <input type="radio" id="vehiculoRegistroAcceso" name="identificacion" value="placa">
+          <label>Placa:</label>
+          <input type="text" id="placaRegistroAcceso" name="placaRegistroAcceso" [(ngModel)]="nuevoRegistroVehiculo.placa"><br>
+          <br><button (click)="registarAccesoVehiculo(nuevoRegistroVehiculo)"><a>Registrar Vehiculo</a></button><br>  
+      </div>
+    </div>
+</form>
+
+
